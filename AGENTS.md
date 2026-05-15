@@ -4,7 +4,7 @@ AI chat slideout panel for Wayland, built as a DankMaterialShell daemon plugin (
 
 ## Setup
 
-Source lives in `src/`. Hot-reload with `dms restart` (full restart required — DMS caches compiled QML in-process; `dms ipc call plugins reload ephemera` does NOT reliably pick up all changes).
+Source lives in `src/`. Hot-reload with `hype restart` (full restart required — DMS caches compiled QML in-process; `hype ipc call plugins reload ephemera` does NOT reliably pick up all changes).
 
 Depends on parent config modules: `qs.Common` (Theme), `qs.Widgets` (Dank* components, StyledText), `qs.Services` (PluginService).
 

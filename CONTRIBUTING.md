@@ -100,12 +100,12 @@ EphemeraDaemon (entry point)
 
 2. Enable the plugin:
    ```sh
-   dms ipc call plugins enable ephemera
+   hype ipc call plugins enable ephemera
    ```
 
 3. To open the panel, either use the configured keybind or:
    ```sh
-   dms ipc call ephemera toggle
+   hype ipc call ephemera toggle
    ```
 
 ## Testing changes
@@ -128,24 +128,24 @@ After editing any `.qml` or `.js` file:
 
 ```sh
 # Full restart (required — reload does NOT reliably pick up all changes)
-dms restart
+hype restart
 
 # Wait a few seconds for DMS to initialize, then re-enable
-dms ipc call plugins enable ephemera
+hype ipc call plugins enable ephemera
 
 # Open the panel
-dms ipc call ephemera toggle
+hype ipc call ephemera toggle
 ```
 
-**Important:** `dms ipc call plugins reload ephemera` does NOT reliably pick up all changes (especially IPC handlers and JS files). Always use `dms restart` during development.
+**Important:** `hype ipc call plugins reload ephemera` does NOT reliably pick up all changes (especially IPC handlers and JS files). Always use `hype restart` during development.
 
 ### Plugin debugging commands
 
 ```sh
-dms ipc call plugins list              # List all plugins and their status
-dms ipc call plugins status ephemera   # Check if enabled/disabled and any errors
-dms ipc call plugins enable ephemera   # Enable the plugin
-dms ipc call plugins disable ephemera  # Disable the plugin
+hype ipc call plugins list              # List all plugins and their status
+hype ipc call plugins status ephemera   # Check if enabled/disabled and any errors
+hype ipc call plugins enable ephemera   # Enable the plugin
+hype ipc call plugins disable ephemera  # Disable the plugin
 ```
 
 ### Checking for errors
@@ -290,7 +290,7 @@ IpcHandler {
 }
 ```
 
-Call with: `dms ipc call ephemera toggle`
+Call with: `hype ipc call ephemera toggle`
 
 ### Theme properties
 
